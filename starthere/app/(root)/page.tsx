@@ -45,7 +45,7 @@ export default async function Home({
           Competitions.
         </p>
 
-        <SearchForm query={query}/>
+        <SearchForm query={query} />
       </section>
 
       <section className="section_container">
@@ -64,8 +64,7 @@ export default async function Home({
         </ul>
       </section>
 
-      <SanityLive/>
-
+      <SanityLive />
     </>
   );
 }

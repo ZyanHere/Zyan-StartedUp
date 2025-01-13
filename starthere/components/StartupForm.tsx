@@ -6,18 +6,17 @@ import { Textarea } from "@/components/ui/textarea";
 import MDEditor from "@uiw/react-md-editor";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
+import { formSchema } from "@/lib/validation";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { createPitch } from "@/lib/actions";
-import { formSchema } from "@/lib/validation";
 
 const StartupForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [pitch, setPitch] = useState("");
   const { toast } = useToast();
   const router = useRouter();
-
 
   const handleFormSubmit = async (prevState: any, formData: FormData) => {
     try {
@@ -76,7 +75,6 @@ const StartupForm = () => {
     error: "",
     status: "INITIAL",
   });
-
 
   return (
     <form action={formAction} className="startup-form">

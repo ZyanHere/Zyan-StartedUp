@@ -55,9 +55,8 @@ const workSans = localFont({
   variable: "--font-work-sans",
 });
 
-
 export const metadata: Metadata = {
-  title: "Start Here",
+  title: "StartedUp",
   description: "Pitch, Vote and Grow",
 };
 
@@ -70,7 +69,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={workSans.variable}>
         {children}
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );
